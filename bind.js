@@ -1,0 +1,12 @@
+function greet(message) {
+    // console.log(`${message} ${this.name}!`);
+    return this.message = (`${message} ${this.name}!`);
+  }  
+  const person = {
+    name: 'John'
+  }  
+  console.log(person)
+  const greetPerson = greet.bind(person);
+  greetPerson('Hello');
+  console.log(person)
+  
