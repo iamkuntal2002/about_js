@@ -30,4 +30,4 @@ function returnfun() {
     return x;
 }
 const ret = returnfun();
-ret() //1 2 3
+ret() //1 10 10
