@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    #### Q1: What is the command to write a commit message in Git? ⭐
+**Answer:**
+Use:
+```sh
+git commit -a
+```
+
+ -a on the command line instructs git to commit the new content of all tracked files that have been modified. You can use 
+```sh
+git add <file>
+```
+or 
+```sh
+git add -A
+```
+
+before git commit -a if new files need to be committed for the first time.
+
+
+**Source:** _edureka.co_
+
+#### Q2: What is difference between Git vs SVN? ⭐
+**Answer:**
+The main point in Git vs SVN debate boils down to this: Git is a distributed version control system (DVCS), whereas SVN is a centralized version control system.
+
+**Source:** _medium.com_
+
+#### Q3: What is Git? ⭐
+**Answer:**
+Git is a Distributed Version Control system (DVCS). It can track changes to a file and allows you to revert back to any particular change.
+
+Its distributed architecture provides many advantages over other Version Control Systems (VCS) like SVN one major advantage is that it does not rely on a central server to store all the versions of a project’s files. 
+
+**Source:** _edureka.co_
+
+#### Q4: What's the difference between a "pull request" and a "branch"? ⭐⭐
+**Answer:**
+* A **branch** is just a separate version of the code.
+
+* A **pull request** is when someone take the repository, makes their own branch, does some changes, then tries to merge that branch in (put their changes in the other person's code repository).
+
+**Source:** _stackoverflow.com_
+
+#### Q5: What is Git fork? What is difference between fork, branch and clone? ⭐⭐
+**Answer:**
+* A **fork** is a remote, server-side copy of a repository, distinct from the original. A fork isn't a Git concept really, it's more a political/social idea. 
+* A **clone** is not a fork; a clone is a local copy of some remote repository.  When you clone, you are actually copying the entire source repository, including all the history and branches.
+* A **branch** is a mechanism to handle the changes within a single repository in order to eventually merge them with the rest of code. A branch is something that is within a repository. Conceptually, it represents a thread of development.
+
+**Source:** _stackoverflow.com_
+
+#### Q6: What is the difference between "git pull" and "git fetch"? ⭐⭐
+**Answer:**
+In the simplest terms, `git pull` does a `git fetch` followed by a `git merge`.
+
+* When you use `pull`, Git tries to automatically do your work for you. **It is context sensitive**, so Git will merge any pulled commits into the branch you are currently working in.  `pull` **automatically merges the commits without letting you review them first**. If you don’t closely manage your branches, you may run into frequent conflicts.
+
+* When you `fetch`, Git gathers any commits from the target branch that do not exist in your current branch and **stores them in your local repository**. However, **it does not merge them with your current branch**. This is particularly useful if you need to keep your repository up to date, but are working on something that might break if you update your files. To integrate the commits into your master branch, you use `merge`.
+
+**Source:** _stackoverflow.com_
+
+#### Q7: How does the Centralized Workflow work? ⭐⭐
+**Answer:**
+The **Centralized Workflow** uses a central repository to serve as the single point-of-entry for all changes to the project. The default development branch is called master and all changes are committed into this branch.
+
+Developers start by cloning the central repository. In their own local copies of the project, they edit files and commit changes. These new commits are stored locally.
+
+To publish changes to the official project, developers *push* their local master branch to the central repository. Before the developer can publish their feature, they need to *fetch* the updated central commits and rebase their changes on top of them. 
+
+Compared to other workflows, the Centralized Workflow has no defined pull request or forking patterns. 
+
+**Source:** _atlassian.com_
+
+#### Q8: You need to update your local repos. What git commands will you use? ⭐⭐
+**Answer:**
+It’s a two steps process. First you fetch the changes from a remote named origin:
+
+```sh
+git fetch origin
+```
+Then you merge a branch master to local:
+
+```sh
+git merge origin/master
+```
+Or simply:
+
+```sh
+git pull origin master
+```
+If origin is a default remote and ‘master’ is default branch, you can drop it eg. `git pull`.
+
+**Source:** _samwize.com_
+
+#### Q9: How to undo the most recent commits in Git? ⭐⭐
+**Details:**
+You accidentally committed wrong files to Git, but haven't pushed the commit to the server yet.
+How can you undo those commits from the local repository?
+
+**Answer:**
+```sh
+$ git commit -m "Something terribly misguided"      
+$ git reset HEAD~                                   # copied the old head to .git/ORIG_HEAD
+<< edit files as necessary >>                       
+$ git add ...                                       
+$ git commit -c ORIG_HEAD                           # will open an editor, which initially contains the log message from the old commit and allows you to edit it
+```
+
+**Source:** _stackoverflow.com_
+
+#### Q10: Tell me the difference between HEAD, working tree and index, in Git? ⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+#### Q11: When should I use "git stash"? ⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+#### Q12: Explain the advantages of Forking Workflow ⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+#### Q13: Could you explain the Gitflow workflow? ⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+#### Q14: You need to rollback to a previous commit and don't care about recent changes. What commands should you use? ⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+#### Q15: How to revert previous commit in git? ⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+#### Q16: What is "git cherry-pick"? ⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+#### Q17: What is a "bare git" repository? ⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+#### Q18: When would you use "git clone --bare" over "git clone --mirror" ? ⭐⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+#### Q19: What is the "HEAD" in Git? ⭐⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+#### Q20: How to remove a file from git without removing it from your file system? ⭐⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+#### Q21: Can you explain what “git reset” does in plain english? ⭐⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+#### Q22: Write down a sequence of git commands for a "Rebase Workflow" ⭐⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+#### Q23: What is difference between "git stash pop" and "git stash apply"? ⭐⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+#### Q24: How do you make an existing repository bare? ⭐⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+#### Q25: What is the difference between "git clone", "git clone --bare" and "git clone --mirror"? ⭐⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+#### Q26: When would you use "git clone" over "git clone --bare" ? ⭐⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+#### Q27: When would you use "git clone" over "git clone --mirror" ? ⭐⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+#### Q28: Write down a git command to check difference between two commits ⭐⭐⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+#### Q29: When do you use "git rebase" instead of "git merge"? ⭐⭐⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+#### Q30: Do you know how to easily undo a git rebase?  ⭐⭐⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+#### Q31: How to amend older Git commit? ⭐⭐⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+#### Q32: What git command do you need to use to know who changed certain lines in a specific file? ⭐⭐⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+#### Q33: What are "git hooks"? ⭐⭐⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+#### Q34: What are the type of git hooks? ⭐⭐⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+#### Q35: What is "git bisect"? How can you use it to determine the source of a (regression) bug? ⭐⭐⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+#### Q36: How can you use "git bisect" to determine the source of a (regression) bug? ⭐⭐⭐⭐⭐
+Read answer on 👉 <a href='https://www.fullstack.cafe'>FullStack.Cafe</a>
+
+
+</body>
+</html>

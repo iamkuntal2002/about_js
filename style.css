@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     margin: 0;
     padding: 0;
@@ -8,4 +9,16 @@
     justify-content: center;
     margin-top: 120px;
     font-size: 50px;
+=======
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+    font-size: 50px;
+>>>>>>> 3a26d14 (first try)
 }
