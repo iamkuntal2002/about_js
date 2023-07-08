@@ -1,0 +1,15 @@
+|       points                 | Extending Built-in Objects                        |
+|------------------------------|---------------------------------------------------|
+| Compatibility Issues         | Can cause compatibility issues across environments and browsers. |
+----------------------------------------------------------------------------------------------------
+| Collisions and Interference  | Increases the risk of naming collisions and conflicts with other code.|
+--------------------------------------------------------------------------------------------------------
+| Breaking Principle of Least  | Modifying built-in objects can confuse other developers who  |
+        Surprise                        expect consistent behavior.
+--------------------------------------------------------------------------------------------------------
+| Performance Impact           | Modifying prototypes can introduce performance issues and inefficiencies.|
+----------------------------------------------------------------------------------------------------------
+| Maintainability and Debugging| Makes code harder to understand, maintain, and debug.|
+--------------------------------------------------------------------------------------------------------
+| Upgradability and Evolution  | Can create challenges when upgrading to newer versions of JavaScript.  |
+------------------------------------------------------------------------------------------------------------

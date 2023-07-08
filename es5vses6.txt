@@ -1,0 +1,18 @@
+|      points         | ES6 Classes                   | ES5 Function Constructors     |
+|---------------------|-------------------------------|-------------------------------|
+| Syntax              | class MyClass { /* ... */ }   | function MyClass() { /* ... */ } |
+----------------------------------------------------------------------------------------------
+| Prototypal          | class ChildClass extends      | ChildClass.prototype =          
+    inheritance         ParentClass { /* ... */ }       Object.create(ParentClass.prototype);|
+-----------------------------------------------------------------------------------------------
+| this Binding        | Automatic binding of 'this'   | Explicit binding of 'this' using 
+                         within methods                  techniques like .bind(), .call(), or .apply()|
+-----------------------------------------------------------------------------------------------
+| Static Methods      | static methodName() { /* ... */ } | Not supported directly;      
+                                                            can be achieved through the constructor 
+                                                            function or the constructor's prototype |
+---------------------------------------------------------------------------------------------------------
+| Readability and Modularity | Improved readability and structured syntax | Less structured syntax, more verbose |
+----------------------------------------------------------------------------------------------------------------
+| Browser Compatibility | May not be supported in older browsers | Widely supported across JavaScript environments |
+-----------------------------------------------------------------------------------------------------------------
